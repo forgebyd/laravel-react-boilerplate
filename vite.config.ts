@@ -1,4 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
 import laravel from "laravel-vite-plugin";
 import { bunny } from "laravel-vite-plugin/fonts";
 import { defineConfig } from "vite";
@@ -6,7 +7,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
     plugins: [
         laravel({
-            input: ["resources/css/app.css", "resources/js/app.js"],
+            input: ["resources/css/app.css", "resources/js/app.tsx"],
             refresh: true,
             fonts: [
                 bunny("Instrument Sans", {
@@ -14,6 +15,11 @@ export default defineConfig({
                 }),
             ],
         }),
+        react({
+            babel: {
+                plugins: [["babel-plugin-react-compiler", { target: "19" }]],
+            },
+        } as any) /** the type-casting is to prevent IDE error */,
         tailwindcss(),
     ],
     server: {
