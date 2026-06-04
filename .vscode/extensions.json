@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "amiralizadeh9480.laravel-extra-intellisense",
+        "ms-azuretools.vscode-docker",
+        "dbaeumer.vscode-eslint",
+        "bmewburn.vscode-intelephense-client",
+        "esbenp.prettier-vscode"
+    ]
+}
