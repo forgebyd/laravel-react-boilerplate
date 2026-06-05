@@ -8,6 +8,7 @@
         "types:check": "tsc --noEmit"
     },
     "devDependencies": {
+        "@laravel/vite-plugin-wayfinder": "^0.1.7",
         "@tailwindcss/vite": "^4.0.0",
         "@types/node": "^25.9.1",
         "@types/react": "^19.2.16",
@@ -21,6 +22,8 @@
         "vite": "^8.0.0"
     },
     "dependencies": {
+        "@inertiajs/react": "^3.3.1",
+        "@inertiajs/vite": "^3.3.1",
         "react": "^19.2.7",
         "react-dom": "^19.2.7"
     }
